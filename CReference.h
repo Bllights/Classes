@@ -7,16 +7,18 @@ USING_NS_CC;
 
 class CReference{
 protected:
-  CReference();
-  CReference(int Level);
+	CReference();
+	CReference(int Level);
 
 protected:
-  int Level;
-  int MaxEXP;
-  int EXP;
-  
+	int r_Level;
+	int r_MaxEXP;
+	int r_EXP;
+	int r_Attack;
+	int r_Health;
+	int r_Damanged;
 public:
-  void LevelUp();
+	void LevelUp();
 
 };
 //RPG 게임 Reference

@@ -30,11 +30,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::createWithRect("My Game",Rect(0,0,500,320));
         director->setOpenGLView(glview);
     }
 
-    director->setDisplayStats(true);
+    director->setDisplayStats(false);
 
     director->setAnimationInterval(1.0 / 60);
 

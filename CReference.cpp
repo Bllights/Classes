@@ -1,16 +1,24 @@
 #include "CReference.h"
 
+int DataManager::Jobkind[10]={1,2,3,4,5,6,7,8,9,10};
+int DataManager::L_EXP[50]={0};
+int DataManager::GetEXPs(int Level){
+
+	return Level;
+}
 CReference::CReference(){
-  Level =1;
-  MaxEXP=DataManager::GetEXPs(Level);
-  EXP=0;
+	CCLOG("CReference 持失切1");
+	r_Level= 1;
+	r_MaxEXP=DataManager::GetEXPs(r_Level);
+	r_EXP=0;
 }
 CReference::CReference(int Level){
-  this.Level=Level;
-  MaxEXP=DataManager::GetEXPs(Level);
-  EXP=0;
+	CCLOG("CReference 持失切2");
+	r_Level=Level;
+	r_MaxEXP=DataManager::GetEXPs(Level);
+	r_EXP=0;
 }
 void CReference::LevelUp(){
-  Level++;
-  MaxEXP=DataManager::GetEXPs(level);
+	r_Level++;
+	r_MaxEXP=DataManager::GetEXPs(r_Level);
 }
